@@ -6,7 +6,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Driver\AbstractMySQLDriver;
 use Illuminate\Database\PDO\Concerns\ConnectsToDatabase;
 
-class MySqlDriver extends Driver
+class MySqlDriver extends AbstractMySQLDriver
 {
     use ConnectsToDatabase;
 
