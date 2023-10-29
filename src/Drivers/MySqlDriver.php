@@ -3,16 +3,18 @@
 namespace Larapack\DoctrineSupport\Drivers;
 
 use Doctrine\DBAL\Connection;
-use Doctrine\DBAL\Driver\PDOMySql\Driver;
-use Larapack\DoctrineSupport\Managers\MySqlSchemaManager;
+use Doctrine\DBAL\Driver\AbstractMySQLDriver;
+use Illuminate\Database\PDO\Concerns\ConnectsToDatabase;
 
 class MySqlDriver extends Driver
 {
+    use ConnectsToDatabase;
+
     /**
      * {@inheritdoc}
      */
-    public function getSchemaManager(Connection $conn)
+    public function getName()
     {
-        return new MySqlSchemaManager($conn);
+        return 'pdo_mysql';
     }
 }
