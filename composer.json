@@ -1,5 +1,5 @@
 {
-  "name": "larapack/doctrine-support",
+  "name": "waverspace/doctrine-support",
   "description": "Better Doctrine Support with Laravel (Support for `enum`)",
   "keywords": ["laravel", "enum", "doctrine", "dbal", "support"],
   "license": "MIT",
